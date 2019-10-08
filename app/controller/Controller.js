@@ -1,5 +1,5 @@
 'use strict';
-var Employee = require('../model/Model.js');
+var Employee = require('../Model/model.js');
 
 exports.employeeAll = function(req, res) {                         //  GET method #1
   Employee.getAll(function(err, names) {     if (err)
@@ -7,7 +7,7 @@ exports.employeeAll = function(req, res) {                         //  GET metho
       res.send(names);  });
 };
 
-exports.employeeOne = function(req, res) {                        //  GET method #2
+exports.employeeOne = function(req, res) {                        //   GET method #2
   Employee.getByTaskId(req.params.taskId, function(err, names) {
     if (err)
       res.send(err);  
@@ -15,7 +15,7 @@ exports.employeeOne = function(req, res) {                        //  GET method
   });
 };
 
-exports.employeeDelete = function(req, res) {                     //  DELETE method #3
+exports.employeeDelete = function(req, res) {                     //   DELETE method #3
   Employee.removeEmployee( req.params.taskId, 
     function(err, jobData) {console.log(req);
     if (err)
@@ -23,7 +23,7 @@ exports.employeeDelete = function(req, res) {                     //  DELETE met
   });
 };
 
-exports.employeeUpdate = function(req, res) {                     //  UPDATE method #4
+exports.employeeUpdate = function(req, res) {                     //   UPDATE method #4
   Employee.updateBytaskId(req.params.taskId, new Employee(req.body), 
   function(err,post,dept,salary,names) {
     if (err)
@@ -32,7 +32,7 @@ exports.employeeUpdate = function(req, res) {                     //  UPDATE met
   });
 };
 
-exports.employeeCreate = function(req, res) {                         //  POST method #5
+exports.employeeCreate = function(req, res) {                      //    POST method #5
   var rusangu = new Employee(req.body);
    if(!rusangu.names || !rusangu.status){
         res.status(400).send({ error:true, 

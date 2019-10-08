@@ -1,5 +1,5 @@
 'user strict';
-var sql = require('./Database.js');
+var sql = require('./database.js');
 
 //Obeject constructor
 var Employee = function(employee){

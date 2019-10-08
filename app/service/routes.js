@@ -1,6 +1,6 @@
 'use strict';
 module.exports = function(app) {
-  var rusangu = require('../controller/Controller');
+  var rusangu = require('../Controller/controller');
 
   // http://localhost/2020/business 
 
