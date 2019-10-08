@@ -1,6 +1,6 @@
 'use strict';
 module.exports = function(app) {
-  var rusangu = require('../controller/eController');
+  var rusangu = require('../controller/Controller');
 
   // http://localhost/2020/business 5 CRUD METHODS
 

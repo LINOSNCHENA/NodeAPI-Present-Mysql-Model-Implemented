@@ -1,5 +1,5 @@
 'use strict';
-var Employee = require('../model/eModel.js');
+var Employee = require('../model/Model.js');
 
 exports.employeeAll = function(req, res) {                         //  GET method #1
   Employee.getRxAll(function(err, names) {     if (err)

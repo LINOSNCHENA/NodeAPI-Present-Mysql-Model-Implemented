@@ -6,8 +6,9 @@ const express = require('express'),
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-var routes = require('./app/routes/approutes'); 
+
+var routes = require('./app/service/routes'); 
 routes(app); 
 
 app.listen(port);
-console.log('API server #2 is pembing at port :' + port);
+console.log('MySQL-API server is pembing at port :' + port);
