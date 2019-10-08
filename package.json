@@ -15,6 +15,10 @@
     "update": "^0.7.4"
   },
   "devDependencies": {
+<<<<<<< HEAD
     "nodemon": "^1.19.3"
+=======
+    "nodemon": "^1.19.1"
+>>>>>>> 1b5f6e31dc084e90efe2b83df70c02b4129d1767
   }
 }
