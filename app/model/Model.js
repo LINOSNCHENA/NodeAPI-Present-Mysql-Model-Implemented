@@ -20,7 +20,7 @@ Employee.getAll = function (result) {
 };
 
 // http://localhost:2020/business/:id                        // GET ONE     #2
-Employee.getRxById = function (employeeX, result) {
+Employee.getByTaskId = function (employeeX, result) {
 sql.query("Select * from bank2 where id = ? ", employeeX, function (err, res) {          
                 if(err) { console.log("error: ", err);    result(err, null);  }
                 else { console.log('Rusangu chosen one: ',  res); result(null, res); }
@@ -28,7 +28,7 @@ sql.query("Select * from bank2 where id = ? ", employeeX, function (err, res) {
 };
 
 // http://localhost:2020/business/:id                        // DELETE ONE  #3
-Employee.removeRx = function(id, result){
+Employee.removeEmployee = function(id, result){
     sql.query("DELETE FROM bank2 WHERE id = ?", [id], function (err, res) {
            if(err) { console.log("error: ", err);   result(null, err);  }
             else{ console.log(res,'Employeed ID #',id,' has been deleted: '); 
@@ -37,7 +37,7 @@ Employee.removeRx = function(id, result){
 };
 
 // http://localhost:2020/business/:id                       // UPDATE ONE   #4
-Employee.updateRxById = function(id, employee, result) {
+Employee.updateByTaskID = function(id, employee, result) {
     sql.query("UPDATE bank2 SET post=?,names=?,dept=?,salary=? WHERE id = ?",
      [employee.post,employee.names,employee.dept, employee.salary,id], function (err, res) {
      if(err) {  console.log("error: ", err);     result(null, err);   }
@@ -47,7 +47,7 @@ Employee.updateRxById = function(id, employee, result) {
   };
 
   // http://localhost:2020/business/:id                   // POST EMPLOYEE     #5
-Employee.createRxOne = function (newEmployee, result) {    
+Employee.createEmployee = function (newEmployee, result) {    
     sql.query("INSERT INTO bank2 set ?", newEmployee, function (err, res) {
             if(err) {console.log("error: ", err);   result(err, null);  }
             else{ console.log('Employee ID #',res.insertId,' Has been created',res); 
