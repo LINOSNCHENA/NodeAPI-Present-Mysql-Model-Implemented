@@ -2,16 +2,16 @@
 var Employee = require('../Model/model.js');
 
 exports.employeeAll = function(req, res) {                         //  GET method #1
-  Employee.getAll(function(err, names) {     if (err)
-      res.send(err);   console.log('Rusangu staff #2 : ', names);      
-      res.send(names);  });
+  Employee.getAll(function(err, name) {     if (err)
+      res.send(err);   console.log('Rusangu staff #2 : ', name);      
+      res.send(name);  });
 };
 
 exports.employeeOne = function(req, res) {                        //   GET method #2
-  Employee.getByTaskId(req.params.taskId, function(err, names) {
+  Employee.getByTaskId(req.params.taskId, function(err, name) {
     if (err)
       res.send(err);  
-      res.json(names);
+      res.json(name);
   });
 };
 
@@ -24,20 +24,20 @@ exports.employeeDelete = function(req, res) {                     //   DELETE me
 };
 
 exports.employeeUpdate = function(req, res) {                     //   UPDATE method #4
-  Employee.updateBytaskId(req.params.taskId, new Employee(req.body), 
-  function(err,post,dept,salary,names) {
+  Employee.updateByTaskId(req.params.taskId, new Employee(req.body), 
+  function(err,post,dept,salary,name) {
     if (err)
       res.send(err);    
-      res.json(post,dept, names,salary);
+      res.json(post,dept, name,salary);
   });
 };
 
 exports.employeeCreate = function(req, res) {                      //    POST method #5
   var rusangu = new Employee(req.body);
-   if(!rusangu.names || !rusangu.status){
+   if(!rusangu.name || !rusangu.status){
         res.status(400).send({ error:true, 
           message: 'Requirements include name,post,salary, and salary' }); }
    else{ 
-  Employee.createEmployee(rusangu, function(err, names) {  if (err)
-           res.send(err);  console.log(rusangu);res.json(names);  });  }
+  Employee.createEmployee(rusangu, function(err, name) {  if (err)
+           res.send(err);  console.log(rusangu);res.json(name);  });  }
 };
