@@ -1,4 +1,3 @@
----MySQL dataBase Aganist MSSQL
 ---ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'Monze2019@';
 
 use presly;

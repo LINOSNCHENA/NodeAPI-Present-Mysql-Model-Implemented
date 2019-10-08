@@ -1,5 +1,6 @@
 'user strict';
 var sql = require('./Database.js');
+
 //Obeject constructor
 var Employee = function(employee){
     this.names = employee.names;
@@ -10,7 +11,7 @@ var Employee = function(employee){
     this.created_at = new Date();
 };
 
-// http://localhost:2020/business                           // GET ALL      #1
+// http://localhost:2020/business                           
 Employee.getRxAll = function (result) {                                   
   sql.query("Select * from bank2", function (err, res) {
         if(err) { console.log("error: ", err);  result(null, err); }

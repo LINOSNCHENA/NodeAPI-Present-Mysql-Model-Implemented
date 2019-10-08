@@ -1,6 +1,5 @@
 'user strict';
 
-
 var mysql = require('mysql');
 // profile Two for database connection
 var connection2 = mysql.createConnection
@@ -12,9 +11,7 @@ var connection2 = mysql.createConnection
 });
 module.exports = connection2;
 
-
 // profile One for database connection
-
 var connection = mysql.createConnection
 ({
     host     : 'localhost',

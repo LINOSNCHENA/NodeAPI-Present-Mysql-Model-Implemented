@@ -2,13 +2,13 @@
 var Employee = require('../model/Model.js');
 
 exports.employeeAll = function(req, res) {                         //  GET method #1
-  Employee.getRxAll(function(err, names) {     if (err)
+  Employee.getAll(function(err, names) {     if (err)
       res.send(err);   console.log('Rusangu staff #2 : ', names);      
       res.send(names);  });
 };
 
 exports.employeeOne = function(req, res) {                        //  GET method #2
-  Employee.getRxById(req.params.taskId, function(err, names) {
+  Employee.getByTaskId(req.params.taskId, function(err, names) {
     if (err)
       res.send(err);  
       res.json(names);
@@ -16,7 +16,7 @@ exports.employeeOne = function(req, res) {                        //  GET method
 };
 
 exports.employeeDelete = function(req, res) {                     //  DELETE method #3
-  Employee.removeRx( req.params.taskId, 
+  Employee.removeEmployee( req.params.taskId, 
     function(err, jobData) {console.log(req);
     if (err)
       res.send(err);  res.json({ jobData, message: 'Deletion was successful!' });
@@ -24,7 +24,7 @@ exports.employeeDelete = function(req, res) {                     //  DELETE met
 };
 
 exports.employeeUpdate = function(req, res) {                     //  UPDATE method #4
-  Employee.updateRxById(req.params.taskId, new Employee(req.body), 
+  Employee.updateBytaskId(req.params.taskId, new Employee(req.body), 
   function(err,post,dept,salary,names) {
     if (err)
       res.send(err);    
@@ -36,8 +36,8 @@ exports.employeeCreate = function(req, res) {                         //  POST m
   var rusangu = new Employee(req.body);
    if(!rusangu.names || !rusangu.status){
         res.status(400).send({ error:true, 
-          message: 'Minimum requirements are names,post,salary, and salary' }); }
+          message: 'Requirements include name,post,salary, and salary' }); }
    else{ 
-  Employee.createRxOne(rusangu, function(err, names) {  if (err)
+  Employee.createEmployee(rusangu, function(err, names) {  if (err)
            res.send(err);  console.log(rusangu);res.json(names);  });  }
 };
