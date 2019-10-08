@@ -1,15 +1,15 @@
 'use strict';
 module.exports = function(app) {
-  var rusangu = require('../Controller/controller');
+  var rusanguLtd = require('../Controller/controller');
 
   app.route('/second')
-    .get(rusangu.employeeAll)
-    .post(rusangu.employeeCreate);
+    .get(rusanguLtd.employeeAll)
+    .post(rusanguLtd.employeeCreate);
 
    // http://localhost:2020/second
 
   app.route('/second/:taskId')  
-    .get(rusangu.employeeOne)
-    .put(rusangu.employeeUpdate)
-    .delete(rusangu.employeeDelete);
+    .get(rusanguLtd.employeeOne)
+    .put(rusanguLtd.employeeUpdate)
+    .delete(rusanguLtd.employeeDelete);
     };
