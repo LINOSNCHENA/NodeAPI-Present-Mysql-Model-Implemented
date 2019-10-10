@@ -13,10 +13,10 @@ createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP);
 
 INSERT INTO bank2 ( name, dept,  post, salary )
    VALUES
-   ( "Leon", "Nchena","Director", 21200 ),
-   ( "Lorena nchena", "Engineer","post", 8500 ),
-   ( "Nikolas nchena", "Engineer","post", 8500 ),
-   ( "Kristopher Mwepu", "cmis","Lecturer", 13500 );
+   ( "Kelvin Mumba", "History","Teacher", 21200 ),
+   ( "Leonard Katongo", "Clinic","Nurse", 1980 ),
+   ( "Mavelous Maunga", "Butchery Officer","Officer", 1978 ),
+   ( "Kristopher Kawewe", "Mining","Business", 1981 );
    
 select * from Bank2
 
