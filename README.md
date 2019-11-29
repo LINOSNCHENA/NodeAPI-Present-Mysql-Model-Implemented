@@ -25,8 +25,8 @@ This is a restfull Backend application only. To use this application, move into 
 
  Below are some Screens shots from the application in development
 
-![ Application Muntu Interface page #1 ](https://github.com/LINOSNCHENA/EmployeesRegistry-from-NodeJS-MongoDB/blob/master/page1.png)
+![ Application Muntu Interface page #1 ](https://github.com/LINOSNCHENA/NodeAPI-Present-Mysql-Model-Implemented/blob/master/page1.png)
 
-![ Application Muntu Interface page #2 ](https://github.com/LINOSNCHENA/EmployeesRegistry-from-NodeJS-MongoDB/blob/master/page2.png)
+![ Application Muntu Interface page #2 ](https://github.com/LINOSNCHENA/NodeAPI-Present-Mysql-Model-Implemented/blob/master/page1.png)
 
 
