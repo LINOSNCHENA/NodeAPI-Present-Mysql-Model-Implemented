@@ -1,4 +1,4 @@
-# RESTFUL BACKEND USING NODEJS MODEL MySQL and POSTMAN
+# RESTFUL BACKEND (NODEJS,MySQL &POSTMAN)
 
 The purpose of the app is to implement business logic most of it outside the engine of the database. Most of the implementation takes place in the middleware and very little task is delegated to the database engine. Taking an entity without creating a model. The arctectural plan in the API creates a definition class before implementaion. It uses the nodejs engine much more than the sql engine hence the model definition is importance. Used include MySQL, Express, Angular and NodeJS (MEAN #2 Stack)
 
