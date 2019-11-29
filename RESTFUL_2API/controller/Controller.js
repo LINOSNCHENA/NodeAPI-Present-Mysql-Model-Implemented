@@ -36,7 +36,7 @@ exports.employeeCreate = function(req, res) {                      //    POST me
   var rusangu = new Employee(req.body);
    if(!rusangu.name || !rusangu.status){
         res.status(400).send({ error:true, 
-          message: 'Requirements include name,post,salary, and salary' }); }
+          message: 'Requirements include name,post,dept and salary' }); }
    else{ 
   Employee.createEmployee(rusangu, function(err, name) {  if (err)
            res.send(err);  console.log(rusangu);res.json(name);  });  }
