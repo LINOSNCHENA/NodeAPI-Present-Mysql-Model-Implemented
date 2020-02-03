@@ -12,7 +12,7 @@ var Employee = function(employee){
 
 // http://localhost:5050/second                                       //  GET ONE  #1                       
 Employee.getAll = function (result) {                                   
-  sql.query("Select * from bank2", function (err, res) {
+  sql.query("Select * from bank3", function (err, res) {
     if(err) { console.log("error: ", err);  result(null, err); }
       else   { console.log('employees : ', res);  result(null, res);   }
     });   
@@ -20,7 +20,7 @@ Employee.getAll = function (result) {
 
 // http://localhost:5050/second/:id                                   // GET ONE  #2
 Employee.getByTaskId = function (employeeX, result) {
-sql.query("Select * from bank2 where id = ? ", employeeX, function (err, res) {          
+sql.query("Select * from bank3 where id = ? ", employeeX, function (err, res) {          
     if(err) { console.log("error: ", err);    result(err, null);  }
       else { console.log('chosen employee : ',  res); result(null, res); }
     });   
@@ -28,7 +28,7 @@ sql.query("Select * from bank2 where id = ? ", employeeX, function (err, res) {
 
 // http://localhost:5050/second/:id                                  // DELETE ONE  #3
 Employee.removeEmployee = function(id, result){
-    sql.query("DELETE FROM bank2 WHERE id = ?", [id], function (err, res) {
+    sql.query("DELETE FROM bank3 WHERE id = ?", [id], function (err, res) {
       if(err) { console.log("error: ", err);   result(null, err);  }
         else{ console.log(res,'Employeed ID #',id,' has been deleted: '); 
         result(null, res);       }
@@ -37,7 +37,7 @@ Employee.removeEmployee = function(id, result){
 
 // http://localhost:5050/second/:id                                 // UPDATE ONE   #4
 Employee.updateByTaskId = function(id, employee, result) {
-    sql.query("UPDATE bank2 SET post=?,name=?,dept=?,salary=? WHERE id = ?",
+    sql.query("UPDATE bank3 SET post=?,name=?,dept=?,salary=? WHERE id = ?",
      [employee.post,employee.name,employee.dept, employee.salary,id], function (err, res) {
       if(err) {  console.log("error: ", err);     result(null, err);   }
       else   { console.log('Employee ID # ',id,'has been updated: res ',id);  
@@ -47,7 +47,7 @@ Employee.updateByTaskId = function(id, employee, result) {
 
   // http://localhost:5050/second                                     // POST EMPLOYEE  #5
 Employee.createEmployee = function (newEmployee, result) {    
-    sql.query("INSERT INTO bank2 set ?", newEmployee, function (err, res) {
+    sql.query("INSERT INTO bank3 set ?", newEmployee, function (err, res) {
       if(err) {console.log("error: ", err);   result(err, null);  }
       else{ console.log('Employee ID #',res.insertId,' Has been created',res); 
       result(null, res.insertId); }
