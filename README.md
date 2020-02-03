@@ -1,4 +1,4 @@
-# RESTFUL BACKEND (NODEJS,MySQL & POSTMAN=ANGULAR 8)
+# RESTFUL BACKEND (NODEJS,MySQL & POSTMAN)
 
 The purpose of the app is to implement business logic, this logic been mostly outside the of the engine of the database. Most of the implementation takes place in the middleware and very little task is delegated to the database engine. Taking an entity without creating a model. The arctectural plan in the API creates a definition class before implementaion. It uses the nodejs engine much more than the sql engine hence the model definition is importance. Five CRUD operations are implemented and exploited using MySQL databases
 
@@ -9,6 +9,7 @@ The full developmental stack of the application consist of;
 2. Database(MySQL)
 3. Server(ExpresJS)
 4. Fake frontEnd (POSTMAN)
+5. Pending(Angular #8)
 
 ## Execution Commands
 
