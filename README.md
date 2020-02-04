@@ -30,5 +30,5 @@ This is a restfull Backend application only. To use this application, move into 
 
 ## Links for the frontend endpoints and backend endpoint
 
-Open [http://localhost:4200/](http://localhost:4200/) in browser to see the frontend of the application.
-Open [http://localhost:8081/](http://localhost:8081/) in browser to see the backend of the application.
+- Open [http://localhost:4200/](http://localhost:4200/) in browser to see the frontend of the application.
+- Open [http://localhost:8081/](http://localhost:8081/) in browser to see the backend of the application.
