@@ -7,7 +7,7 @@ var Employee = function(employee){
     this.post = employee.post;
     this.salary = employee.salary;
     this.status = employee.status;
-    this.createdAt = new Date();
+   // this.createdAt = new Date();
 };
 
 // http://localhost:5050/second                                       //  GET ONE  #1                       
