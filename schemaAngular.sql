@@ -9,7 +9,8 @@ name VARCHAR(50) NOT NULL,
 dept VARCHAR(50) NOT NULL,
 post VARCHAR(50),
 salary int,
-status VARCHAR(50) default "Temporal");
+status VARCHAR(50) default "Temporal",
+createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP););
 
 INSERT INTO bank3 ( name, dept,  post, salary )
    VALUES

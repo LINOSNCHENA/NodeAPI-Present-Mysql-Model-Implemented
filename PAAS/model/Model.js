@@ -7,7 +7,7 @@ var Employee = function(employee){
     this.post = employee.post;
     this.salary = employee.salary;
     this.status = employee.status;
-   // this.createdAt = new Date();
+    this.createdAt = new Date();
 };
 
 // http://localhost:8081/full/accounts                                            //  GET ONE  #1                       
@@ -38,7 +38,7 @@ Employee.removeEmployee = function(id, result){
 // http://localhost:8081/full/accounts/:id                                     // UPDATE ONE   #4
 Employee.updateByTaskId = function(id, employee, result) {
     sql.query("UPDATE bank3 SET post=?,name=?,dept=?,salary=? WHERE id = ?",
-     [employee.post,employee.name,employee.dept, employee.salary,id], function (err, res) {
+     [id, employee.post,employee.name,employee.dept, employee.salary,employee.createdAt], function (err, res) {
       if(err) {  console.log("error: ", err);     result(null, err);   }
       else   { console.log('Employee ID # ',id,'has been updated: res ',id);  
       result(null, res);     }   
