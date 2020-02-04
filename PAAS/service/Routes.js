@@ -8,7 +8,7 @@ module.exports = function(app)
     .get(rusanguLtd.employeeAll)
     .post(rusanguLtd.employeeCreate);
 
-// http://8080/full/accounts/81
+// http://8081/full/accounts/:id
   app.route('/full/accounts/:taskId')  
     .get(rusanguLtd.employeeOne)
     .put(rusanguLtd.employeeUpdate)
