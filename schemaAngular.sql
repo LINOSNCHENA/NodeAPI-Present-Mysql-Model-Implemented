@@ -9,12 +9,12 @@ name VARCHAR(50) NOT NULL,
 dept VARCHAR(50) NOT NULL,
 post VARCHAR(50),salary int,
 status VARCHAR(50) default "Temporal",
-createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP);
+createdat TIMESTAMP DEFAULT CURRENT_TIMESTAMP);
 
 INSERT INTO bank3 ( name, dept,  post, salary )
    VALUES
    ( "Marvin Nikolas", "Management","Teacher", 21209 ),
-   ( "Leon Malawi", "Engineering"," Engineer", 12014 ),
+   ( "Lumumba Malawi", "Engineering"," Engineer", 12014 ),
    ( "Lorena Leon", "Human Resource","Executive", 12009 ),
    ( "Nikolas Marvin", "Management","Director", 12084 );
    

@@ -1,0 +1,67 @@
+<br>
+<header class="masthead bg-primary text-white text-center">
+  <div class="container"><br>
+    <h2 class="text-uppercase mb-0">DATA ENTRY TO THE DEPARTMENT </h2>
+    <hr class="star-light">
+  </div>
+</header>
+
+<div class="container">
+
+    <form (ngSubmit) = "completeForm()">
+      <div class="form group">
+      <label for="id"> Edit or update records in database</label> 
+    </div>  
+
+    <div class="form group">
+        <label for="name"> FULL-NAME</label>
+        <input type="text" name="fname"  class="form-control" [(ngModel)]="worker.name">
+    </div>
+
+    <div class="form group">
+        <label for="post">POSITION</label> 
+        <select name="post"  class="form-control" [(ngModel)]="worker.post">
+          <option value="Administrator">Administrator</option>
+          <option value="Lecturer">Lecturer</option>
+          <option value="Contractor">Contractor</option>
+          <option value="Labourer">Labourer</option>       
+          <option value="others">Others- Please Specify Below</option></select>
+    </div>  
+    
+    <div class="form group">
+        <label for="dept">JOB DEPARTMENT</label>
+        <select name="dept"  class="form-control" [(ngModel)]="worker.dept">
+          <option value="computing">Computing</option>
+          <option value="Accounting">Accounting</option>
+          <option value="Humanresource">Human Resource</option>
+          <option value="Finance">Finance</option>       
+          <option value="others">Others- Please Specify Below</option></select>
+    </div>
+
+    <div class="form group">
+      <label for="status">JOB STATUS</label>
+      <select name="status"  class="form-control" [(ngModel)]="worker.status">
+        <option value="Permanent">permanent</option>
+        <option value="Part-time">part-time</option>
+        <option value="Contractor">contractor</option>
+        <option value="Visitor">visitor</option>       
+        <option value="others">Others- Please Specify Below</option></select>
+    </div>  
+    
+    <div class="form group">
+        <label for="salary">SALARY</label>
+        <input type="text" name="nname" class="form-control" [(ngModel)]="worker.salary">
+    </div>
+    
+    <div class="form group">
+      <label for="createdt">CREATED AT</label>
+      <select name="createdt"  class="form-control" [(ngModel)]="worker.createdt" >
+      <option value="2019-10-12">Yesterday</option>  
+      <option value="2019-10-12">Today</option>
+      <option value="2019-10-12">Tommorow</option>       
+      <option value="2000-01-20">Unknown</option></select>
+    </div>
+  
+     <input type="submit" value="save" class="btn btn-success">
+    </form>
+  </div>
