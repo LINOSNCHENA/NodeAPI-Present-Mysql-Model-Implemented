@@ -26,7 +26,7 @@ This is a restfull Backend application only. To use this application, move into 
 
 ![ Application Muntu Interface page #1 ](https://github.com/LINOSNCHENA/NodeAPI-Present-Mysql-Model-Implemented/blob/master/page1.png)
 
-![ Application Muntu Interface page #2 ](https://github.com/LINOSNCHENA/NodeAPI-Present-Mysql-Model-Implemented/blob/master/page1.png)
+![ Application Muntu Interface page #2 ](https://github.com/LINOSNCHENA/NodeAPI-Present-Mysql-Model-Implemented/blob/master/page2.png)
 
 ## Links for the frontend endpoints and backend endpoint
 
