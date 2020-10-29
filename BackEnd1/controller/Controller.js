@@ -25,10 +25,10 @@ exports.employeeDelete = function(req, res) {                     //   DELETE me
 
 exports.employeeUpdate = function(req, res) {                     //   UPDATE method #4
   Employee.updateByTaskId(req.params.taskId, new Employee(req.body), 
-  function(err,post,dept,salary,createdat,name) {
+  function(err,post,dept,salary,name) {
     if (err)
       res.send(err);    
-      res.json(post,dept, name,createdat,salary);
+      res.json(post,dept, name,salary);
   });
 };
 

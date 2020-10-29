@@ -11,7 +11,7 @@ module.exports = function(app)
 // http://8081/full/accounts/:id
   app.route('/full/accounts/:taskId')  
     .get(rusanguLtd.employeeOne)
-    .put(rusanguLtd.employeeUpdate)
+  //  .put(rusanguLtd.employeeUpdate)
     .patch(rusanguLtd.employeeUpdate)
     .delete(rusanguLtd.employeeDelete);
     

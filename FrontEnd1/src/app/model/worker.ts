@@ -5,6 +5,6 @@ export class Worker {
     post:String;
     salary:Number;  
     status: String;
-    createdat: Date;  
+  //  createdat: Date;  
 
 }

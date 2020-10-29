@@ -13,7 +13,7 @@ app.use(function (req, res, next) {              //  SECURITY LUMUMBA
   res.setHeader('Access-Control-Allow-Credentials', true);
   next();  });
 
-var routes = require('./PAAS/service/Routes'); 
+var routes = require('./backend1/service/Routes'); 
 routes(app); 
 
 app.listen(port);

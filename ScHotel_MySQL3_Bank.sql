@@ -13,9 +13,9 @@ createdat TIMESTAMP DEFAULT CURRENT_TIMESTAMP);
 
 INSERT INTO bank3 ( name, dept,  post, salary )
    VALUES
-   ( "Marvin Nikolas", "Management","Teacher", 21209 ),
-   ( "Lumumba Malawi", "Engineering"," Engineer", 12014 ),
-   ( "Lorena Leon", "Human Resource","Executive", 12009 ),
-   ( "Nikolas Marvin", "Management","Director", 12084 );
+   ( "Marvin Nikolas", "Management","MySQL-Teacher", 21209 ),
+   ( "Lumumba Malawi", "Engineering","MySQL-Engineer", 12014 ),
+   ( "Lorena Leon", "Human Resource","MySQL-Executive", 12009 ),
+   ( "Nikolas Marvin", "Management","MySQL-Director", 12084 );
    
 select * from Bank3

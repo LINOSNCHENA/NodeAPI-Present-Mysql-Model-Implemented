@@ -19,7 +19,29 @@ This is a restfull Backend application only. To use this application, move into 
   2. install express
   3. install mysql
   4. Node server.js
+  5. nodemon start
 
+
+### Execution Commands
+
+Execution of this application use the following command
+
+```
+npm i
+npm start
+npm stop
+node server.js
+
+```
+
+## Localhost links
+http://localhost:3030/teachers \
+http://localhost:3030/courses \
+http://localhost:3030/students
+
+
+## Interface U-Xperience
+ Below are screen shots from the application output
 ## Interface UX
 
  Below are some Screens shots from the application in development

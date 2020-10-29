@@ -7,7 +7,7 @@ var Employee = function(employee){
     this.post = employee.post;
     this.salary = employee.salary;
     this.status = employee.status;
-    this.createdat = new Date();
+    this.createdat = new Date().toISOString().substring(0,19).replace('T',' ');
 };
 
 // http://localhost:8081/full/accounts                                            //  GET ONE  #1                       
@@ -35,16 +35,23 @@ Employee.removeEmployee = function(id, result){
      }); 
 };
 
-// http://localhost:8081/full/accounts/:id                                     // UPDATE ONE   #4
+  // http://localhost:8081/full/accounts/:id                                     // UPDATE ONE   #4
 Employee.updateByTaskId = function(id, employee, result) {
-    sql.query("UPDATE bank3 SET post=?,name=?,dept=?,salary=? WHERE id = ?",
-     [id, employee.post,employee.name,employee.dept, employee.salary,employee.createdat], function (err, res) {
-      if(err) {  console.log("error: ", err);     result(null, err);   }
-      else   { console.log('Employee ID # ',id,'has been updated: res ',id);  
-      result(null, res);     }   
-    }); 
-  };
-
+  sql.query("UPDATE bank3 SET post=?,name=?,dept=?,salary=? WHERE id = ?",
+   [id, employee.post,employee.name,employee.dept, employee.salary], function (err, res) {
+    if(err) {  console.log("error: ", err);     result(null, err);   }
+    else   { console.log('Employee ID # ',id,'has been updated: res ',id);  
+    result(null, res);     }   
+  }); 
+};
+  // exports.employeeUpdate = function(req, res) {                     //   UPDATE method #4
+  //   Employee.updateByTaskId(req.params.taskId, new Employee(req.body), 
+  //   function(err,post,dept,salary,createdat,name) {
+  //     if (err)
+  //       res.send(err);    
+  //       res.json(post,dept, name,createdat,salary);
+  //   });
+  // };
   // http://localhost:8081/full/accounts                                        // POST EMPLOYEE  #5
 Employee.createEmployee = function (newEmployee, result) {    
     sql.query("INSERT INTO bank3 set ?", newEmployee, function (err, res) {
