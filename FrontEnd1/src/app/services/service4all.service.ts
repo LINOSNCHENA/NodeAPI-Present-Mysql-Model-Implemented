@@ -12,7 +12,8 @@ import { map } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class Service4allService {
-  private url1:string='http://localhost:8081/full';
+ // private url1:string='http://localhost:8081/full';
+  private url1:string='http://localhost:8080/full';
   private headers = new Headers ({'Content-Type' : 'application/json'});
   private options = new RequestOptions({headers:this.headers});      // Data type Server
   private worker:Worker;

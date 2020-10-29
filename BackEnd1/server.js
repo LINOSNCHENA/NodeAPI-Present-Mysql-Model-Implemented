@@ -1,7 +1,7 @@
 const express = require('express'),
   app = express(),
-  bodyParser = require('body-parser'),
-  port = process.env.PORT || 8081;
+  bodyParser = require('body-parser');//,
+
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
@@ -16,5 +16,6 @@ app.use(function (req, res, next) {              //  SECURITY LUMUMBA
 var routes = require('./routes/service/Routes'); 
 routes(app); 
 
+port = process.env.PORT || 8080;
 app.listen(port);
-console.log('MySQL-API server is pembing at port :' + port);
+console.log('MySQL-API1 server A is pembing at port :' + port);

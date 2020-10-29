@@ -32,6 +32,7 @@ exports.employeeUpdate = function(req, res) {                     //   UPDATE me
   });
 };
 
+
 exports.employeeCreate = function(req, res) {                      //    POST method #5
   var rusangu = new Employee(req.body);
    if(!rusangu.name || !rusangu.status){
