@@ -74,86 +74,9 @@ app.get('/full/accounts/:id', function (req, res) {
     });
 });
 /////////////////////////////////////////////////////////////////////////////// EMPLOYEES
-app.post('/einsertData', function (req, res) {
-    let name = req.body.name;
-    let office = req.body.office;
-    let email = req.body.email;
-    let mobile = req.body.mobile;
-    let createdat = new Date().toISOString().substring(0,19).replace('T',' ');
-    connection.query("INSERT INTO `employees`( `name`, `mobile`, `office`, `email`, `createdat`) VALUES('" + name + "','" + mobile + "','"+ office + "','" + email + "','" + createdat + "')", function (err, results) {
 
-        if (err) throw err;
-        res.send({ "msg": "Successfully Inserted" });
-    });
-});
-
-app.get('/egetdata', function (req, res) {
-    connection.query('SELECT * FROM `employees`', function (err, results) {
-        if (err) throw err;
-        res.send(results);
-    });
-});
-
-
-app.get('/eeditData/:id', function (req, res) {
-    let id = req.params.id;
-    connection.query("select *  FROM `employees` where id =" + id, function (err, results) {
-        if (err) throw err;
-        res.send(results);
-    });
-
-});
-
-app.post('/eupdateData/:id', function (req, res) {
-    let id = req.body.id;
-    let name = req.body.name;
-    let mobile = req.body.mobile;
-    let office = req.body.office;
-    let email = req.body.email;
-    let createdat = new Date().toISOString().substring(0,19).replace('T',' ');
-    connection.query("UPDATE `employees` SET `name`= '" + name + "', `mobile` = '" + mobile + "',`office` ='" + office + "',email='" + email + "',createdat='" + createdat + "'  where `id`= " + id, function (err, results) {
-        if (err) throw err;
-        res.send({ "msg": "Successfully Updated" });
-    });
-});
-
-app.get('/edeletedata/:id', function (req, res) {
-    let id = req.params.id;
-    connection.query("Delete  FROM `employees` where id =" + id, function (err, results) {
-        if (err) throw err;
-        res.send(results);
-    });
-});
 ////////////////////////////////////////////////////////////////////////////////// WORKERS
 
 
-app.get('/wgetdata', function (req, res) {
-    connection.query('SELECT * FROM `workers`', function (err, results) {
-        if (err) throw err;
-        res.send(results);
-    });
-});
-
-
-app.get('/weditData/:id', function (req, res) {
-    let id = req.params.id;
-    connection.query("select *  FROM `workers` where id =" + id, function (err, results) {
-        if (err) throw err;
-        res.send(results);
-    });
-
-});
-
-
-
-app.get('/wdeletedata/:id', function (req, res) {
-    let id = req.params.id;
-    connection.query("Delete  FROM `workers` where id =" + id, function (err, results) {
-        if (err) throw err;
-        res.send(results);
-    });
-});
-
-
-const PORT1 = process.env.PORT1 || 4210;
-app.listen(PORT1, () => console.log(`Server2 is listening on port B ${PORT1}`))
+const PORT = process.env.PORT1 || 4210;
+app.listen(PORT, () => console.log(`Server3 is -SMARTDATA-listening on port B ${PORT}`))

@@ -28,7 +28,7 @@ exports.employeeUpdate = function(req, res) {                     //   UPDATE me
   function(err,post,dept,salary,name) {
     if (err)
       res.send(err);    
-      res.json(post,dept, name,salary);
+      res.json(post,dept,salary, name);
   });
 };
 
