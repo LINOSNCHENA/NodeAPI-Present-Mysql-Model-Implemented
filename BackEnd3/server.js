@@ -34,5 +34,6 @@ console.log(myObj);
 
 
 
-const PORT1 = process.env.PORT || 8086;
-app.listen(PORT1, () => console.log(`Server6 is -ADMIN-listening on port 3C ${PORT1}`))
+
+const PORT1 = process.env.PORT31 || 8086;
+app.listen(PORT1, () => console.log(`BackEnd3 -ADMINDATA- is listening on port31 : ${PORT1}`))

@@ -28,7 +28,7 @@ connection.getConnection(function (error, connection) {
   if (!!error) {
     console.log(error);
   } else {
-    console.log("Connected CARE-GIVER!:)");
+    console.log("Connected SENSORS!:)");
   }
 });
 module.exports = connection;
