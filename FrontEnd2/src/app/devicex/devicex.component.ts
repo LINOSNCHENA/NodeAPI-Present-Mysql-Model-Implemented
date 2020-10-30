@@ -1,18 +1,36 @@
 import { Component, OnInit } from '@angular/core';
-import { Worker } from '../model/worker';
 import { Router } from '@angular/router';
-//import { Service4allService } from '../services/Service4all.service';
-import { BkgserviceService } from '../services/bkgservice.service';
-import { FormGroup, FormControl } from '@angular/forms';
 import { AdmserviceService } from '../services/admservice.service';
+import { DevserviceService } from '../services/devservice.service';
+
+import { Worker } from '../model/worker'
+import { FormGroup, FormControl } from '@angular/forms';
 
 @Component({
-  selector: 'app-all-employees',
-  templateUrl: './all-employees.component.html',
-  styleUrls: ['./all-employees.component.css']
+  selector: 'app-devicex',
+  templateUrl: './devicex.component.html',
+  styleUrls: ['./devicex.component.css']
 })
-export class AllEmployeesComponent implements OnInit {
-
+export class DevicexComponent implements OnInit {
+  //private worker: Worker;
+  worker: Worker;
+  completeForm() {
+    console.log(this.worker);
+    // test for worker presence
+    if (this.worker.id == undefined) {
+      this._admsource.addItem(this.worker).subscribe((worker) => {
+        console.log(worker);
+        this._routsource.navigate(['/']);
+      }, (error) => { console.log(error); });
+    }
+    else {
+      // Both update and create worker
+      this._admsource.saveOrUpdateItem(this.worker).subscribe((worker) => {
+        console.log(worker);
+        this._routsource.navigate(['/']);
+      }, (error) => { console.log(error); });
+    }
+  }
   title: string;
   rows: Worker[] = [];
 
@@ -34,10 +52,11 @@ export class AllEmployeesComponent implements OnInit {
     isactive: new FormControl(''),
     createdat: new FormControl('')
   });
-  private workers: Worker[];
-  constructor(private _userService: AdmserviceService,//Service4allService, 
-    private _router: Router,
-    private service: BkgserviceService) { }
+  // private workers: Worker[];
+  public workers: Worker[];
+  constructor(private _userService: AdmserviceService,
+    private _router: Router, private service: DevserviceService,
+    private _admsource: AdmserviceService, private _routsource: Router) { }
 
   ngOnInit() {
     this._userService.getItems().subscribe(
@@ -46,6 +65,7 @@ export class AllEmployeesComponent implements OnInit {
     this.service.getData().subscribe(data => {
       this.finalresults = data;
     });
+    this.worker = this._admsource.getter();
   }
 
   onsubmit() {
@@ -68,16 +88,14 @@ export class AllEmployeesComponent implements OnInit {
       , (error) => { console.log(error); });
 
   }
-// add worker
+  // add worker
   newItem() {
     let worker = new Worker();
     this._userService.setter(worker);
     this._router.navigate(['/enrolls']);
   }
 
-
-  ///////////////////////////////////new staff
-
+  /////////////////////////////////// SECOND API  ////////////////////////////////////////////////
 
   deletefnc(id: string) {
     this.service.deleteData(id).subscribe(() => {
@@ -102,5 +120,4 @@ export class AllEmployeesComponent implements OnInit {
       this.profileForm.reset();
     });
   }
-
 }

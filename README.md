@@ -13,20 +13,16 @@ The full developmental stack of the application consist of;
 
 ## Execution Commands
 
-This is a restfull Backend application only. To use this application, move into the root folder where there is the server.js file. Enter the following commands;
-  
-  1. npm install
-  2. install express
-  3. install mysql
-  4. Node server.js
-  5. nodemon start
-
-
-### Execution Commands
-
-Execution of this application use the following command
+This is a restfull Backend application only. To use this application, move into the root folder where there is the server.js file. Enter the following commands. Execution of this application use the following command
 
 ```
+ npm install
+  install express
+  install mysql
+  Node server.js
+  nodemon start
+  npm install rxjs-compat
+
 npm i
 npm start
 npm stop

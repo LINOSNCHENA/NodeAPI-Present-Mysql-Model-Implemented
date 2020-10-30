@@ -11,6 +11,14 @@ export const environment = {
   url2: "http://localhost:4220",
   url3: "http://localhost:4230",
 
+  application:
+  {
+    name: 'SECOND-BANKERS',
+    angular: 'Angular 10.0.14',
+    bootstrap: 'Bootstrap 4.5.2',
+    fontawesome: 'Font Awesome 5.14.0',
+  }
+
 };
 
 /*

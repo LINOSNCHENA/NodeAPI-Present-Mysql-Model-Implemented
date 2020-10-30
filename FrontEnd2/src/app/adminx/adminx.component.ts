@@ -1,18 +1,16 @@
 import { Component, OnInit } from '@angular/core';
-import { Worker } from '../model/worker';
-import { Router } from '@angular/router';
-//import { Service4allService } from '../services/Service4all.service';
-import { BkgserviceService } from '../services/bkgservice.service';
 import { FormGroup, FormControl } from '@angular/forms';
+import { Router } from '@angular/router';
 import { AdmserviceService } from '../services/admservice.service';
+import { DevserviceService } from '../services/devservice.service';
+import { Worker } from '../model/worker';
 
 @Component({
-  selector: 'app-all-employees',
-  templateUrl: './all-employees.component.html',
-  styleUrls: ['./all-employees.component.css']
+  selector: 'app-adminx',
+  templateUrl: './adminx.component.html',
+  styleUrls: ['./adminx.component.css']
 })
-export class AllEmployeesComponent implements OnInit {
-
+export class AdminxComponent implements OnInit {
   title: string;
   rows: Worker[] = [];
 
@@ -34,10 +32,11 @@ export class AllEmployeesComponent implements OnInit {
     isactive: new FormControl(''),
     createdat: new FormControl('')
   });
-  private workers: Worker[];
-  constructor(private _userService: AdmserviceService,//Service4allService, 
+  //private workers: Worker[];
+  workers: Worker[];
+  constructor(private _userService: AdmserviceService,
     private _router: Router,
-    private service: BkgserviceService) { }
+    private service: DevserviceService) { }
 
   ngOnInit() {
     this._userService.getItems().subscribe(
@@ -54,19 +53,17 @@ export class AllEmployeesComponent implements OnInit {
       this.ngOnInit();
     });
   }
-
+////////////////////////////////////////////////////////////////////////////////////
   // Double
   saveOrUpdateItem(worker: Worker) {
     this._userService.setter(worker);
     this._router.navigate(['/enrolls']);
   }
-
   // remove worker
   deleteItem(worker: Worker) {
     this._userService.deleteItem(worker.id).subscribe(
       (data) => { this.workers.splice(this.workers.indexOf(worker), 1); }
       , (error) => { console.log(error); });
-
   }
 // add worker
   newItem() {
@@ -74,7 +71,6 @@ export class AllEmployeesComponent implements OnInit {
     this._userService.setter(worker);
     this._router.navigate(['/enrolls']);
   }
-
 
   ///////////////////////////////////new staff
 
@@ -102,5 +98,7 @@ export class AllEmployeesComponent implements OnInit {
       this.profileForm.reset();
     });
   }
+
+
 
 }
