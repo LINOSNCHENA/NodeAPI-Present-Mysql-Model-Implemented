@@ -8,7 +8,6 @@ import { HandleError, HttpErrorHandler } from './errorManager';
   providedIn: 'root'
 })
 export class BkgserviceService {
-
   private url = `${environment.url1}`;
   private handleError: HandleError;
   httpOptions = {
@@ -26,24 +25,24 @@ export class BkgserviceService {
   }
 
   insertData(fields: any) {
-    return this.http.post(this.url + "/full/accounts/", fields)
+    return this.http.post(this.url + "/binsertData", fields)
       .pipe(
-        catchError(this.handleError('full/accounts', null)))
+        catchError(this.handleError('bInserDataMonze', null)))
   }
 
   getData() {
-    return this.http.get(this.url + "/full/accounts/");
+    return this.http.get(this.url + "/bgetdata");
   }
 
   deleteData(id: string) {
-    return this.http.get(this.url + "/full/accounts/" + id);
+    return this.http.get(this.url + "/bdeletedata/" + id);
   }
 
   editValue(id: string) {
-    return this.http.get(this.url + "/full/accounts/" + id);
+    return this.http.get(this.url + "/beditData/" + id);
   }
 
   updateData(id: string, value: any) {
-    return this.http.post(this.url + "/full/accounts/" + id, value);
+    return this.http.post(this.url + "/bupdateData/" + id, value);
   }
 }

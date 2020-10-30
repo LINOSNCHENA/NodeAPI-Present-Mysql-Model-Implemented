@@ -29,8 +29,10 @@ app.post("/login", function (req, res) {
 
 ///////////////////////////////////////////////// ACCESS
 
-var myObj = { firsname : "John", lastname : "Doe" };
+var myObj = { firsname : "Loreana", lastname : "Nikolas" };
 console.log(myObj);
 
-const PORT = process.env.PORT6 || 8086;
-app.listen(PORT, () => console.log(`Server6 is -SERVER-listening on port 3C ${PORT}`))
+
+
+const PORT1 = process.env.PORT || 8086;
+app.listen(PORT1, () => console.log(`Server6 is -ADMIN-listening on port 3C ${PORT1}`))
