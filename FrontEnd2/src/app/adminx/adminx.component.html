@@ -27,7 +27,6 @@
         <td>{{worker.status}}</td>
         <td>{{worker.createdat}}</td>
         <td>
-          <a (click)=" deletefnc(worker.id)" class="btn alert-danger btn-sm"> DelexXZM </a>&nbsp;
           <button class="btn btn-danger" (click)="deleteItem(worker)">Delete</button>
           <button class="btn btn-primary" (click)="saveOrUpdateItem(worker)">Edit</button>
         </td>
@@ -35,6 +34,7 @@
     </tbody>
   </table>
   <button class="btn btn-primary" (click)="newItem()">Add new entry to the Room</button>
+
 </div>
 <br><br>
 

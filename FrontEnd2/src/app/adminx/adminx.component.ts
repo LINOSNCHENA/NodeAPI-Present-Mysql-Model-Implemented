@@ -34,17 +34,20 @@ export class AdminxComponent implements OnInit {
   });
   //private workers: Worker[];
   workers: Worker[];
-  constructor(private _userService: AdmserviceService,
+  constructor(
     private _router: Router,
-    private service: DevserviceService) { }
+    private _admservice: AdmserviceService,
+    private service: DevserviceService    
+    ) { }
 
   ngOnInit() {
-    this._userService.getItems().subscribe(
+    this._admservice.getItems().subscribe(
       (workers) => { console.log(workers); this.workers = workers; }
       , (error) => { console.log(error); })
+      //////////////////////////////////////
     this.service.getData().subscribe(data => {
-      this.finalresults = data;
-    });
+      this.finalresults = data;}
+    , (error) => { console.log(error); });
   }
 
   onsubmit() {
@@ -56,25 +59,23 @@ export class AdminxComponent implements OnInit {
 ////////////////////////////////////////////////////////////////////////////////////
   // Double
   saveOrUpdateItem(worker: Worker) {
-    this._userService.setter(worker);
+    this._admservice.setter(worker);
     this._router.navigate(['/devicex']);
   }
   // remove worker
   deleteItem(worker: Worker) {
-    this._userService.deleteItem(worker.id).subscribe(
+    this._admservice.deleteItem(worker.id).subscribe(
       (data) => { this.workers.splice(this.workers.indexOf(worker), 1); }
       , (error) => { console.log(error); });
   }
 // add worker
   newItem() {
     let worker = new Worker();
-    this._userService.setter(worker);
+    this._admservice.setter(worker);
     this._router.navigate(['/devicex']);
   }
 
   ///////////////////////////////////new staff
-
-
   deletefnc(id: string) {
     this.service.deleteData(id).subscribe(() => {
       this.deletemsg = "1 Record Deleted";
@@ -98,7 +99,4 @@ export class AdminxComponent implements OnInit {
       this.profileForm.reset();
     });
   }
-
-
-
 }

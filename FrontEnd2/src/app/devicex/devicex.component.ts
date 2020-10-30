@@ -94,6 +94,10 @@ export class DevicexComponent implements OnInit {
     this._userService.setter(worker);
     this._router.navigate(['/enrolls']);
   }
+  // show all workers
+  showlist() {
+    this._router.navigate(['/']);
+  }
 
   /////////////////////////////////// SECOND API  ////////////////////////////////////////////////
 
