@@ -16,8 +16,8 @@ import { HttpModule } from '@angular/http';
 
 
 const appRoutes: Routes = [
-  { path: 'enrolls', component: AdminxComponent },
-  { path: '', component: DevicexComponent },
+  { path: 'devicex', component: DevicexComponent },
+  { path: '', component: AdminxComponent },
 ];
 
 @NgModule({

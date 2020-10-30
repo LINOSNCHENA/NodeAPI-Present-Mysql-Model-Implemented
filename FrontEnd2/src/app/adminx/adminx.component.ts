@@ -57,7 +57,7 @@ export class AdminxComponent implements OnInit {
   // Double
   saveOrUpdateItem(worker: Worker) {
     this._userService.setter(worker);
-    this._router.navigate(['/enrolls']);
+    this._router.navigate(['/devicex']);
   }
   // remove worker
   deleteItem(worker: Worker) {
@@ -69,7 +69,7 @@ export class AdminxComponent implements OnInit {
   newItem() {
     let worker = new Worker();
     this._userService.setter(worker);
-    this._router.navigate(['/enrolls']);
+    this._router.navigate(['/devicex']);
   }
 
   ///////////////////////////////////new staff
