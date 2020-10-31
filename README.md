@@ -33,5 +33,11 @@ npm install rxjs-compat
 
 Below are some Screens shots from the application in development
 
-![ Application Muntu #1 ](https://github.com/LINOSNCHENA/NodeAPI-Present-Mysql-Model-Implemented/blob/master/page1.png)
-![ Application Muntu #2 ](https://github.com/LINOSNCHENA/NodeAPI-Present-Mysql-Model-Implemented/blob/master/page2.png)
+![ AMuntu #1 ](https://github.com/LINOSNCHENA/NodeAPI-Present-Mysql-Model-Implemented-FS1/blob/master/uxViews/page1.png)
+![ AMuntu #2 ](https://github.com/LINOSNCHENA/NodeAPI-Present-Mysql-Model-Implemented-FS1/blob/master/uxViews/page2.png)
+![ AMuntu #3 ](https://github.com/LINOSNCHENA/NodeAPI-Present-Mysql-Model-Implemented-FS1/blob/master/uxViews/page3.png)
+![ AMuntu #4 ](https://github.com/LINOSNCHENA/NodeAPI-Present-Mysql-Model-Implemented-FS1/blob/master/uxViews/page4.png)
+![ AMuntu #5 ](https://github.com/LINOSNCHENA/NodeAPI-Present-Mysql-Model-Implemented-FS1/blob/master/uxViews/page5.png)
+![ AMuntu #6 ](https://github.com/LINOSNCHENA/NodeAPI-Present-Mysql-Model-Implemented-FS1/blob/master/uxViews/page6.png)
+![ AMuntu #7 ](https://github.com/LINOSNCHENA/NodeAPI-Present-Mysql-Model-Implemented-FS1/blob/master/uxViews/page7.png)
+![ AMuntu #8 ](https://github.com/LINOSNCHENA/NodeAPI-Present-Mysql-Model-Implemented-FS1/blob/master/uxViews/page8.png)
