@@ -1,4 +1,4 @@
-# MICROSERVICES ( NodeJS,AnGULAr 9+ and MySQL)
+# MICROSERVICES (Frontend #2, NodeJS and MySQL)
 
 This app business logic is implemented mostly outside the of the engine of the database. Most of the implementation takes place in the middleware and very little task is delegated to the database engine. Taking an entity without creating a model. The architectural plan in the API creates a definition class before implementation. It uses the NodeJS engine much more than the sql engine hence the model definition is importance. Five CRUD operations are implemented and exploited using MySQL database.
 
