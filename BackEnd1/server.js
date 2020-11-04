@@ -13,7 +13,7 @@ app.use(function (req, res, next) {              //  SECURITY LUMUMBA
   res.setHeader('Access-Control-Allow-Credentials', true);
   next();  });
 
-var routes = require('./routes/service/Routes'); 
+var routes = require('./app/service/Routes'); 
 routes(app); 
 
 port = process.env.PORT || 8080;

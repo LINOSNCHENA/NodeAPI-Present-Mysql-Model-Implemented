@@ -4,6 +4,9 @@ import { Router } from '@angular/router';
 import { AdmserviceService } from '../services/admservice.service';
 import { DevserviceService } from '../services/devservice.service';
 import { Worker } from '../model/worker';
+// import { filter } from 'rxjs/internal/operators/filter';
+// import { filter } from 'rxjs-compat/operator/filter';
+// import { filter } from 'rxjs/operators';
 
 @Component({
   selector: 'app-adminx',
@@ -17,7 +20,7 @@ export class AdminxComponent implements OnInit {
   p: number = 1;
   limit: number = 2;
   total: number;
-  finalresults: Object;
+  finalresults: any;//Worker[];//Object;
 
   msgs: any;
   deletemsg: any;
@@ -47,7 +50,9 @@ export class AdminxComponent implements OnInit {
       //////////////////////////////////////
     this.service.getData().subscribe(data => {
       this.finalresults = data;}
-    , (error) => { console.log(error); });
+        
+      
+      )
   }
 
   onsubmit() {
@@ -99,4 +104,5 @@ export class AdminxComponent implements OnInit {
       this.profileForm.reset();
     });
   }
+
 }

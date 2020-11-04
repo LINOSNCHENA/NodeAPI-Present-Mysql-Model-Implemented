@@ -22,7 +22,7 @@ export class DevserviceService {
     private http: HttpClient,
     private httpErrorHandler: HttpErrorHandler
   ) {
-    this.handleError = this.httpErrorHandler.createHandleError('ProductService')
+    this.handleError = this.httpErrorHandler.createHandleError('AdminzService')
   }
 
   insertData(fields: any) {
@@ -35,15 +35,15 @@ export class DevserviceService {
     return this.http.get(this.url + "/bgetdata");
   }
 
-  deleteData(id: string) {
-    return this.http.get(this.url + "/bdeletedata/" + id);
-  }
-
   editValue(id: string) {
     return this.http.get(this.url + "/beditData/" + id);
   }
 
   updateData(id: string, value: any) {
     return this.http.post(this.url + "/bupdateData/" + id, value);
+  }
+
+  deleteData(id: string) {
+    return this.http.get(this.url + "/bdeletedata/" + id);
   }
 }
