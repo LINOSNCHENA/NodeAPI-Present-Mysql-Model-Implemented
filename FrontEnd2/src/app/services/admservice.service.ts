@@ -13,43 +13,37 @@ export class AdmserviceService {
 
   private url1: string = 'http://localhost:8080/full';
   private headers = new Headers({ 'Content-Type': 'application/json' });
-  private options = new RequestOptions({ headers: this.headers });      // Data type Server
+  private options = new RequestOptions({ headers: this.headers });     
   private worker: Worker;
 
   constructor(private _http: Http) { }
 
-  // http://localhost/8081/full/accounts                             //  GET+POST+DELETE(3)
-  getItems() {
-    return this._http.get(this.url1 + '/accounts', this.options)
-      .map(res => res.json())
-      .catch(this.errorPost);
-  }
-  addItem(worker: Worker) {
+
+  addItem(worker: Worker) {                                                 // 1
     return this._http.post(this.url1 + '/accounts', JSON.stringify(worker), this.options)
       .map(res => res.json())
       .catch(this.errorPost);
   }
-
-  deleteItems(id: Number) {
-    return this._http.delete(this.url1 + '/accounts/' + id, this.options)
+                  
+  getItems() {                                                             // 2 A
+    return this._http.get(this.url1 + '/accounts', this.options)
       .map(res => res.json())
       .catch(this.errorPost);
   }
-
-  // http://localhost/8081/full/accounts/:id                          //  GET/PUT/DELETE/ERROR(4)
-  getItem(id: Number) {
+                     
+  getItem(id: Number) {                                                   // 2 B
     return this._http.get(this.url1 + '/accounts/' + id, this.options)
       .map(res => res.json())
       .catch(this.errorPost);
   }
 
-  saveOrUpdateItem(worker: Worker) {
+  saveOrUpdateItem(worker: Worker) {                                      //  3
     return this._http.put(this.url1 + '/accounts', JSON.stringify(worker), this.options)
       .map(res => res.json())
       .catch(this.errorPost);
   }
-
-  deleteItem(id: Number) {
+       
+  deleteItem(id: Number) {                                                // 4
     return this._http.delete(this.url1 + '/accounts/' + id, this.options)
       .map(res => res.json())
       .catch(this.errorPost);
