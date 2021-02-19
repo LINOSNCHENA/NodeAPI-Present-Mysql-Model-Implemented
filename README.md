@@ -1,4 +1,4 @@
-# MICROSERVICES (Angular, NodeJS and MySQL+Postgresql)
+# Angular, NodeJS and MySQL+Postgresql
 
 This app business logic is implemented mostly outside the of the engine of the database. Most of the implementation takes place in the middleware and very little task is delegated to the database engine. Taking an entity without creating a model.
 
@@ -42,10 +42,10 @@ nodemon start
 
 Below are some screens(5) shots from the application console output
 
-![ AMuntu #1 ](https://github.com/LINOSNCHENA/NodeJS-model-implemented-using-MySQL/blob/master/uxViews/page1.png)
-![ AMuntu #2 ](https://github.com/LINOSNCHENA/NodeJS-model-implemented-using-MySQL/blob/master/uxViews/page2.png)
-![ AMuntu #3 ](https://github.com/LINOSNCHENA/NodeJS-model-implemented-using-MySQL/blob/master/uxViews/page3.png)
-![ AMuntu #4 ](https://github.com/LINOSNCHENA/NodeJS-model-implemented-using-MySQL/blob/master/uxViews/page4.png)
-![ AMuntu #5 ](https://github.com/LINOSNCHENA/NodeJS-model-implemented-using-MySQL/blob/master/uxViews/page5.png)
+![ AMuntu #1 ](https://github.com/LINOSNCHENA/NodeJS-model-implemented-using-MySQL/blob/main/uxViews/page1.png)
+![ AMuntu #2 ](https://github.com/LINOSNCHENA/NodeJS-model-implemented-using-MySQL/blob/main/uxViews/page2.png)
+![ AMuntu #3 ](https://github.com/LINOSNCHENA/NodeJS-model-implemented-using-MySQL/blob/main/uxViews/page3.png)
+![ AMuntu #4 ](https://github.com/LINOSNCHENA/NodeJS-model-implemented-using-MySQL/blob/main/uxViews/page4.png)
+![ AMuntu #5 ](https://github.com/LINOSNCHENA/NodeJS-model-implemented-using-MySQL/blob/main/uxViews/page1.png)
 
 # END
