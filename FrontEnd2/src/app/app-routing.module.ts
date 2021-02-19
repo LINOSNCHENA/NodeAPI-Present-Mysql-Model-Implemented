@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { AdminxComponent } from './adminx/adminx.component';
-import { DevicexComponent } from './devicex/devicex.component';
+import { AdminxComponent } from './customers/adminx.component';
+import { DevicexComponent } from './products/devicex.component';
 
 const routesx: Routes = [];
 const routes: Routes = [
