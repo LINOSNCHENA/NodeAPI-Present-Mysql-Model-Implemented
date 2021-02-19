@@ -1,23 +1,22 @@
-'user strict';
-var mysql = require('mysql');
+"user strict";
+var mysql = require("mysql");
 
+// profile Two: Password Authentification database connection
 
-// profile Two for first database connection
-var connection = mysql.createConnection
-({
-    host     : 'localhost',
-    user     : 'root',
-    password : 'Monze@2019',
-    database : 'presly'
+var connection1 = mysql.createConnection({
+  host: "localhost",
+  user: "root",
+  password: "Monze@2019",
+  database: "presly",
+});
+module.exports = connection1;
+
+// profile One: Data manipulation and storage  database connection
+
+var connection = mysql.createConnection({
+  host: "localhost",
+  user: "root",
+  password: "Monze@2019",
+  database: "presly",
 });
 module.exports = connection;
-
-// profile One for second  database connection
-var connection2 = mysql.createConnection
-({
-    host     : 'localhost',
-    user     : 'root',
-    password : 'Monze@2019',
-    database : 'presly'
-});
-module.exports = connection2;

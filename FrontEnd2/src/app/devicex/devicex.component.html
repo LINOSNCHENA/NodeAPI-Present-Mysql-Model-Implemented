@@ -1,3 +1,23 @@
+<nav class="navbar navbar-expand-sm bg-info navbar-dark">
+  <a class="navbar-brand" href=#> Product2AndUsers</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div id="collapsibleNavbar" class="collapse navbar-collapse justify-content-center">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link active" routerLink="/admin">Back to Admin</a>
+      </li>
+      <!-- <li class="nav-item">
+        <a class="nav-link active" routerLink="/device">Device2</a>
+      </li> -->
+      <li class="nav-item">
+        <a class="nav-link" href=#>Contact Us</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
 <br>
 <header class="masthead bg-primary text-white text-center">
   <div class="container"><br>
@@ -58,9 +78,9 @@
 
     <input type="submit" value="save" class="btn btn-success">
   </form>
-<br><br>
+  <br><br>
 
-  <nav class="navbar navbar-expand-sm bg-info navbar-dark">
+  <!-- <nav class="navbar navbar-expand-sm bg-info navbar-dark">
     <a class="navbar-brand" href=#>LOGO A- DEVICESS</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
       <span class="navbar-toggler-icon"></span>
@@ -76,7 +96,12 @@
       </ul>
     </div>
 
-  </nav>
+  </nav> -->
+
+
+
+
+
 
   <div class="clear"></div>
   <div class="container-fluid">
@@ -123,8 +148,9 @@
       <div class="row col-sm-1"></div>
       <div class="row col-sm-6">
 
-        <div>
-          <h3> DETAILS OF DEVICES </h3>
+        <div class="container">
+
+          <h3> DETAILS OF DEVICE Products </h3>
         </div>
         <table class="table  table-striped table-bordered">
           <thead class="table-primary">
@@ -143,7 +169,7 @@
               <td>{{ bookings.town }}</td>
               <td>{{ bookings.hotel }}</td>
               <td>{{ bookings.isactive}}</td>
-              <td>{{ bookings.createdat}}</td>
+              <td>{{bookings?.createdat| date :'medium'}}</td>
               <td>
                 <a (click)=" deletefnc(bookings.id)" class="btn alert-danger btn-sm"> Delete </a>&nbsp;
                 <a (click)=" editData(bookings.id)" class="btn  alert-info btn-sm">edit</a>
@@ -153,8 +179,8 @@
         </table>
 
         <br>
-        <button class="btn btn-primary" style="position: relative; right: 10%;" 
-        (click)="showlist()"> Back to Basic  Room</button><br>
+        <button class="btn btn-primary" style="position: relative; right: 10%;" (click)="showlist()"> Back to Basic
+          Room</button><br>
       </div>
     </div>
   </div>
