@@ -1,0 +1,21 @@
+{
+  "name": "backjs",
+  "version": "1.1.1",
+  "description": "Third backend",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "three",
+    "backend"
+  ],
+  "author": "mln",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.6",
+    "pg": "^8.4.2"
+  }
+}
