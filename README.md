@@ -1,4 +1,4 @@
-# MICROSERVICES (Angular, NodeJS and MySQL+Postgresql)
+# Angular, NodeJS and MySQL+Postgresql
 
 This app business logic is implemented mostly outside the of the engine of the database. Most of the implementation takes place in the middleware and very little task is delegated to the database engine. Taking an entity without creating a model.
 
