@@ -1,35 +1,33 @@
 require("dotenv").config();
-require('./models/smartdata');
-const express = require('express');
-const cors = require('cors');
+require("./model/bookingData");
+const express = require("express");
+const cors = require("cors");
 var bodyParser = require("body-parser");
 var app = express();
 app.use(cors());
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-app.get('/', (req, res) => res.send('AT-Home connection #1 successful!'));
+app.get("/", (req, res) => res.send("AT-Home connection #1 successful!"));
 
-const administrators=require("./managers/validator")
+const administrators = require("./validation/validator");
 
 //////////////////////////////////////////////// REGISTER
-app.post("/signup", function (req, res) {    
+app.post("/signup", function (req, res) {
   if (administrators.checkInputDataNULL(req, res)) return false;
   if (administrators.checkInputDataQuality(req, res)) return false;
-  var dbFunctions = require("./models/connectSmarts");
+  var dbFunctions = require("./model/adminConnected");
   dbFunctions.createUser(req, res);
 });
 
 app.post("/login", function (req, res) {
   if (administrators.checkInputDataNULL(req, res)) return false;
   if (administrators.checkInputDataQuality(req, res)) return false;
-  var dbFunctions = require("./models/connectSmarts");
+  var dbFunctions = require("./model/adminConnected");
   dbFunctions.loginUser(req, res);
 });
 
-///////////////////////////////////////////////// ACCESS
-var myObj = { firsname : "John", lastname : "Doe" };
-console.log(myObj);
-
-const PORT = process.env.PORT || 8080;
-app.listen(PORT, () => console.log(`Server1 is listening on port A ${PORT}`))
+const PORT1 = process.env.PORT1 || 1921;
+app.listen(PORT1, () =>
+  console.log(`BackEnd3 -ADMINDATA- is listening on Port-1 : ${PORT1}`)
+);

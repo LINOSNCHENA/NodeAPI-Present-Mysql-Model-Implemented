@@ -1,21 +1,23 @@
 {
-  "name": "backjs",
-  "version": "1.1.1",
-  "description": "Third backend",
+  "name": "backend1",
+  "version": "1.8.4",
+  "description": "THREE, VERSIONS, OF , BACKEND",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
   "keywords": [
-    "three",
-    "backend"
+    "VERSIONS",
+    "CONTROL",
+    "2020IGA",
+    "IGA-2020"
   ],
-  "author": "mln",
+  "author": "LMN",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
-    "nodemon": "^2.0.6",
-    "pg": "^8.4.2"
+    "mysql": "^2.18.1",
+    "nodemon": "^2.0.7"
   }
 }
