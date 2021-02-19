@@ -7,7 +7,7 @@ import { HandleError, HttpErrorHandler } from './errorManager';
 @Injectable({
   providedIn: 'root'
 })
-export class DevserviceService {
+export class ProductService {
 
   private url = `${environment.url1}`;
   private handleError: HandleError;

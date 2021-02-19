@@ -9,7 +9,8 @@ import { Worker } from '../model/worker';
 @Injectable({
   providedIn: 'root'
 })
-export class AdmserviceService {
+export class AdminsService {
+
 
   private url1: string = 'http://localhost:8080/full';
   private headers = new Headers({ 'Content-Type': 'application/json' });
@@ -20,10 +21,11 @@ export class AdmserviceService {
 
 
   addItem(worker: Worker) {                                                 // 1
-    return this._http.post(this.url1 + '/accounts', JSON.stringify(worker), this.options)
+    return this._http.post(this.url1 + '/accounts', JSON.stringify(worker),this.options)
       .map(res => res.json())
       .catch(this.errorPost);
   }
+
                   
   getItems() {                                                             // 2 A
     return this._http.get(this.url1 + '/accounts', this.options)

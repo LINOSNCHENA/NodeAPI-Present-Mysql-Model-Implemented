@@ -1,10 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { AdmserviceService } from '../services/admservice.service';
-import { DevserviceService } from '../services/devservice.service';
-
 import { Worker } from '../model/worker'
 import { FormGroup, FormControl } from '@angular/forms';
+import { AdminsService } from '../services/admins.service';
+import { ProductService } from '../services/product.service';
 
 @Component({
   selector: 'app-devicex',
@@ -54,9 +53,10 @@ export class DevicexComponent implements OnInit {
   });
   // private workers: Worker[];
   public workers: Worker[];
-  constructor(private _userService: AdmserviceService,
-    private _router: Router, private service: DevserviceService,
-    private _admsource: AdmserviceService, private _routsource: Router) { }
+  constructor(private _userService: AdminsService,
+    private _router: Router, private service: ProductService,
+    private _admsource: AdminsService, 
+    private _routsource: Router) { }
 
   ngOnInit() {
     this._userService.getItems().subscribe(
@@ -99,7 +99,7 @@ export class DevicexComponent implements OnInit {
     this._router.navigate(['/']);
   }
 
-  /////////////////////////////////// SECOND API  ////////////////////////////////////////////////
+  /////////////////////////////////// SECOND PART  ////////////////////////////////////////////
 
   deletefnc(id: string) {
     this.service.deleteData(id).subscribe(() => {

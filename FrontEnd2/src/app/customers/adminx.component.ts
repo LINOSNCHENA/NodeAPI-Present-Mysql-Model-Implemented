@@ -1,12 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
-import { AdmserviceService } from '../services/admservice.service';
-import { DevserviceService } from '../services/devservice.service';
 import { Worker } from '../model/worker';
-// import { filter } from 'rxjs/internal/operators/filter';
-// import { filter } from 'rxjs-compat/operator/filter';
-// import { filter } from 'rxjs/operators';
+import { AdminsService } from '../services/admins.service';
+import { ProductService } from '../services/product.service';
 
 @Component({
   selector: 'app-adminx',
@@ -39,8 +36,8 @@ export class AdminxComponent implements OnInit {
   workers: Worker[];
   constructor(
     private _router: Router,
-    private _admservice: AdmserviceService,
-    private service: DevserviceService    
+    private _admservice: AdminsService,
+    private service: ProductService    
     ) { }
 
   ngOnInit() {
@@ -61,7 +58,7 @@ export class AdminxComponent implements OnInit {
       this.ngOnInit();
     });
   }
-////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////// SECOND PART //////////////////
   // Double
   saveOrUpdateItem(worker: Worker) {
     this._admservice.setter(worker);
