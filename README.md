@@ -1,4 +1,4 @@
-# Angular, NodeJS and MySQL+Postgresql
+# Angular, NodeJS, and MySQL+Postgresql
 
 This app business logic is implemented mostly outside the of the engine of the database. Most of the implementation takes place in the middleware and very little task is delegated to the database engine. Taking an entity without creating a model.
 
@@ -8,11 +8,10 @@ The architectural plan in the API creates a definition class before implementati
 
 The full developmental stack of the application consist of;
 
-1. JavaScript(NodeJS+Angular)
+1. NodeJS+ExpressJS
 2. Database(MySQL)
 3. Database(Postgresql)
-4. Server(ExpresJS)
-5. FrontEnd (Angular +10)
+4. FrontEnd (Angular +10 &+11)
 
 ## Execution Commands
 
@@ -48,4 +47,18 @@ Below are some screens(5) shots from the application console output
 ![ AMuntu #4 ](https://github.com/LINOSNCHENA/NodeJS-model-implemented-using-MySQL/blob/main/uxViews/page4.png)
 ![ AMuntu #5 ](https://github.com/LINOSNCHENA/NodeJS-model-implemented-using-MySQL/blob/main/uxViews/page1.png)
 
+
+## Versioning
+```
+    We analyzed your package.json, there are some packages to update:
+
+      Name                               Version                  Command to update
+     --------------------------------------------------------------------------------
+      @angular/cli                       10.2.0 -> 11.2.1         ng update @angular/cli
+      @angular/core                      10.2.1 -> 11.2.1         ng update @angular/core
+
+    There might be additional packages which don't provide 'ng update' capabilities that are outdated.
+    You can update the additional packages by running the update command of your package manager.
+
+```
 # END
