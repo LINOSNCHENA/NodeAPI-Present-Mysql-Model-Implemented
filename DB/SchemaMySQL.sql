@@ -11,10 +11,10 @@ status VARCHAR(50) default "YES",
 createdat TIMESTAMP DEFAULT CURRENT_TIMESTAMP);
 INSERT INTO `BANK1` ( name, dept,  post, salary )
    VALUES
-   ( "NikolasZ", "ManagerX","MySQL-THREE", 21209 ),
-   ( "LorenaZ", "ScienceX","MySQL-Engineer", 12014 ),
-   ( "LeonZZZ", "ChemistryX","MySQL-THREE", 12009 ),
-   ( "MarvinZ", "ManagerX","MySQL-Director", 12084 );
+   ( "Nikolas21", "ManagerX","MySQL-ONE", 21209 ),
+   ( "Lorena21", "ScienceX","MySQL-ONE", 12014 ),
+   ( "Leon2121", "ChemistryX","MySQL-ONE", 12009 ),
+   ( "Marvin21", "KINGDOM1","MySQL-ONE", 12084 );
    
 -- Table structure for table `BANK3`
 --
@@ -38,10 +38,11 @@ CREATE TABLE `BANK3`
 --
 
 INSERT INTO `BANK3` (`name`,`town`, `hotel`, `isactive`) VALUES
-('LorenaZ', 'VasterasX', 'Monze1', 2011),
-('LeonZZZ', 'PragueX', 'Choma2', 2012),
-('MarvinZ', 'PragueX', 'Maz3', 2013),
-('Nikolas', 'AmsterX', 'Kafue4', 2014),
-('CathyZZ', 'LusakaX', 'Manda5', 2015);
+('LorenaZ', 'VasterasX', 'THREE', 2011),
+('LeonZZZ', 'PragueX', 'THREE', 2012),
+('MarvinZ', 'PragueX', 'THREE', 2013),
+('Nikolas', 'AmsterX', 'THREE', 2014),
+('CathyZZ', 'EMPIRE3', 'THREE', 2015);
 
-select * from `BANK1`, `BANK3`;
+
+select* from BANK1, bank3;
