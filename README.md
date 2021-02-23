@@ -1,17 +1,15 @@
 # Angular, NodeJS, and MySQL+Postgresql
 
-This app business logic is implemented mostly outside the of the engine of the database. Most of the implementation takes place in the middleware and very little task is delegated to the database engine. Taking an entity without creating a model.
-
-The architectural plan in the API creates a definition class before implementation. It utilizes the NodeJS engine much more than the sql engine hence the model definition is importance. Backend #3 have three similar code structures.
+Business logic(sql string generation) is implemented mostly outside the of the engine of the database. Most of the implementation takes place in the middleware and very little task is delegated to the database engine. Architectural plan in the API creates a definition class before sql string construction. It utilizes the NodeJS engine much more than the sql engine hence the model definition is importance. Backend #3 have three similar code structures for three different data objects.
 
 ## Technology Stack used
 
 The full developmental stack of the application consist of;
 
-1. NodeJS+ExpressJS
-2. Database(MySQL)
-3. Database(Postgresql)
-4. FrontEnd (Angular +10 &+11)
+1. FrontEnd (Angular +10 & +11)
+2. NodeJS+ExpressJS
+3. Database(MySQL)
+4. Database(Postgresql)
 
 ## Execution Commands
 
@@ -35,7 +33,7 @@ nodemon start
 
 - Open [http://localhost:4200/](http://localhost:4200/) in browser to see the frontend of the application.
 - Open [http://localhost:8080/](http://localhost:8080/) in browser to see the backend #1 of the application.
-- Open [http://localhost:8081/](http://localhost:8081/) in browser to see the backend #2 of the application.
+- Open [http://localhost:8081/](http://localhost:8081/) in browser to see the backend #3 of the application.
 
 ## user Interface
 
@@ -48,7 +46,7 @@ Below are some screens(5) shots from the application console output
 ![ AMuntu #5 ](https://github.com/LINOSNCHENA/NodeJS-model-implemented-using-MySQL/blob/main/uxViews/page1.png)
 
 
-## Versioning
+## Versioning - Pending Update: LECTURE # 2
 ```
     We analyzed your package.json, there are some packages to update:
 
@@ -61,4 +59,7 @@ Below are some screens(5) shots from the application console output
     You can update the additional packages by running the update command of your package manager.
 
 ```
+
+
+
 # END
