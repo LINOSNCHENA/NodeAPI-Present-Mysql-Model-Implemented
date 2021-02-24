@@ -12,6 +12,7 @@ import { Worker } from '../model/worker';
   providedIn: 'root',
 })
 export class AdminsService {
+  private url: string = 'http://localhost:8080/full/accounts';
   private url1: string = 'http://localhost:8080/full';
   private headers = new Headers({ 'Content-Type': 'application/json' });
   private options = new RequestOptions({ headers: this.headers });
@@ -43,12 +44,17 @@ export class AdminsService {
       .catch(this.errorPost);
   }
 
-  saveOrUpdateItem(worker: Worker) {
-    //  3
-    return this._http
-      .put(this.url1 + '/accounts', JSON.stringify(worker), this.options)
-      .map((res) => res.json())
-      .catch(this.errorPost);
+  // saveOrUpdateItexm(worker: Worker) {
+  //   //  3
+  //   return this._http
+  //     .put(this.url1 + '/accounts/', JSON.stringify(worker), this.options)
+  //     .map((res) => res.json())
+  //     .catch(this.errorPost);
+  // }
+  saveOrUpdateItem(id: number, productx: Worker): Observable<any> {
+    console.log(productx);
+    const url = `${this.url}/${id}`;
+    return this._http.put(url, productx, this.options);
   }
 
   deleteItem(id: Number) {

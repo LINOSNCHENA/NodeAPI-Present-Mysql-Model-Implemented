@@ -4,7 +4,6 @@ import { Http, Headers, RequestOptions } from '@angular/http';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/observable/throw';
-//import 'rxjs';
 import 'rxjs/Rx';
 
 import { Worker } from '../model/worker';
@@ -29,18 +28,6 @@ export class AdminsService {
       .catch(this.errorPost);
   }
 
-//  saveOrUpdateItem(worker: Worker) {
-    saveOrUpdateItemX(worker: any) {
-    //  3
-    console.log(worker)
-    const zed=worker.id;
-    console.log(zed);
-    return this._http
-      .put(this.url1 + '/accounts/'+zed, JSON.stringify(worker), this.options)
-      //.post(this.url1 + '/accounts/'+zed, JSON.stringify(worker), this.options)
-      .map((res: { json: () => any }) => {res.json(), console.log(res)})
-      .catch(this.errorPost);
-  }
 
   saveOrUpdateItem(id: number, productx: Worker): Observable<any> {
     console.log(productx);

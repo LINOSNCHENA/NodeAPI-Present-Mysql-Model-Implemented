@@ -24,7 +24,7 @@ export class DevicexComponent implements OnInit {
     }
     else {
       // Both update and create worker
-      this._admsource.saveOrUpdateItem(this.worker).subscribe((worker) => {
+      this._admsource.saveOrUpdateItem(this.worker.id, this.worker).subscribe((worker) => {
         console.log(worker);
         this._routsource.navigate(['/']);
       }, (error) => { console.log(error); });

@@ -81,6 +81,4 @@ rxjs                            6.6.3
 typescript                      4.1.5
 ```
 
-
-
 # END

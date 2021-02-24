@@ -1,9 +1,9 @@
 export class Worker {
-    id:Number;
+    id:number;
     name:String;
     dept:String;
     post:String;
-    salary:Number;  
+    salary:number;  
     status: String;
 
 }
