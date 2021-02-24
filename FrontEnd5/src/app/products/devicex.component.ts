@@ -11,8 +11,6 @@ import { ProductService } from '../services/product.service';
   styleUrls: ['./devicex.component.css']
 })
 export class DevicexComponent implements OnInit {
-  //private worker: Worker;
-  //private worker: Worker;
   worker!: Worker;
   completeForm() {
     console.log(this.worker);
