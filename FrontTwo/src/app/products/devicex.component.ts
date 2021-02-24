@@ -17,17 +17,22 @@ export class DevicexComponent implements OnInit {
   completeForm() {
     console.log(this.worker);
     // test for worker presence
-    if (this.worker.id == undefined) {
-      this._admsource.addItem(this.worker).subscribe((worker) => {
-        console.log(worker);
-        this._routsource.navigate(['/']);
+   // if (this.worker.id == undefined) {
+      if (!this.worker.id) {
+        console.log(this.worker.id);
+      this._AdMinService.addItem(this.worker).subscribe((worker) => {
+     //   console.log(worker);
+        this._AdmRouter.navigate(['/']);
       }, (error) => { console.log(error); });
     }
     else {
       // Both update and create worker
-      this._admsource.saveOrUpdateItem(this.worker).subscribe((worker) => {
-        console.log(worker);
-        this._routsource.navigate(['/']);
+      console.log(this.worker.id);
+      var zed=(this.worker);
+      this._AdMinService.saveOrUpdateItem(this.worker.id, this.worker).subscribe((worker) => {
+      //  console.log(worker);
+        console.log(zed);
+        this._AdmRouter.navigate(['/']);
       }, (error) => { console.log(error); });
     }
   }
@@ -57,8 +62,8 @@ export class DevicexComponent implements OnInit {
   public workers!: Worker[];
   constructor(private _userService: AdminsService,
     private _router: Router, private service: ProductService,
-    private _admsource: AdminsService, 
-    private _routsource: Router) { }
+    private _AdMinService: AdminsService, 
+    private _AdmRouter: Router) { }
 
   ngOnInit() {
     this._userService.getItems().subscribe(
@@ -67,7 +72,7 @@ export class DevicexComponent implements OnInit {
     this.service.getData().subscribe(data => {
       this.finalresults = data;
     });
-    this.worker = this._admsource.getter();
+    this.worker = this._AdMinService.getter();
   }
 
   onsubmit() {

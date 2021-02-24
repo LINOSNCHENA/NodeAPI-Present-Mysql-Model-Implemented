@@ -14,6 +14,7 @@ import { Worker } from '../model/worker';
 })
 export class AdminsService {
   private url1: string = 'http://localhost:8080/full';
+  private url: string = 'http://localhost:8080/full/accounts';
   private headers = new Headers({ 'Content-Type': 'application/json' });
   private options = new RequestOptions({ headers: this.headers });
   private worker!: Worker;
@@ -28,16 +29,26 @@ export class AdminsService {
       .catch(this.errorPost);
   }
 
-  saveOrUpdateItem(worker: Worker) {
+//  saveOrUpdateItem(worker: Worker) {
+    saveOrUpdateItemX(worker: any) {
     //  3
     console.log(worker)
     const zed=worker.id;
     console.log(zed);
     return this._http
       .put(this.url1 + '/accounts/'+zed, JSON.stringify(worker), this.options)
+      //.post(this.url1 + '/accounts/'+zed, JSON.stringify(worker), this.options)
       .map((res: { json: () => any }) => {res.json(), console.log(res)})
       .catch(this.errorPost);
   }
+
+  saveOrUpdateItem(id: number, productx: Worker): Observable<any> {
+    console.log(productx);
+    const url = `${this.url}/${id}`;
+    return this._http.put(url, productx, this.options);
+    // return this._http.put(url, productx, { responseType: 'json' });
+  }
+
   getItems() {
     // 2 A
     return this._http
