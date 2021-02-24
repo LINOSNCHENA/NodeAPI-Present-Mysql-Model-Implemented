@@ -45,8 +45,8 @@ Below are some screens(5) shots from the application console output
 ![ AMuntu #4 ](https://github.com/LINOSNCHENA/NodeJS-model-implemented-using-MySQL/blob/main/uxViews/page4.png)
 ![ AMuntu #5 ](https://github.com/LINOSNCHENA/NodeJS-model-implemented-using-MySQL/blob/main/uxViews/page1.png)
 
-
 ## Versioning - Pending Update: LECTURE # 2
+
 ```
     We analyzed your package.json, there are some packages to update:
 
@@ -59,7 +59,6 @@ Below are some screens(5) shots from the application console output
     You can update the additional packages by running the update command of your package manager.
 
 ```
-
 
 ```
 Angular: 11.2.2
