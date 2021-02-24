@@ -26,22 +26,24 @@
 <div class="container">
   <table class="table table-striped">
     <thead>
-      <th>Id</th>
+      <th>No.</th>
       <th>Name</th>
+      <th>Identity</th>
+      <th>State</th>
       <th>Position</th>
-      <th>TypeOfRoom</th>
       <th>Deposity</th>
       <th>Status </th>
-      <th>Registration Date</th>
+      <th>Entry Date</th>
       <th colspan="2">Actions</th>
     </thead>
     <tbody>
-      <tr *ngFor="let worker of workers">
+      <tr *ngFor="let worker of workers; let t=index">
+        <td>{{t}}</td>
         <td>{{worker?.id}}</td>
         <td>{{worker?.name}}</td>
         <td>{{worker?.post}}</td>
         <td>{{worker?.dept}}</td>
-        <td>{{worker?.salary}}</td>
+        <td> ZMK {{worker?.salary}}</td>
         <td>{{worker?.status}}</td>
         <td>{{worker?.createdat| date :'medium'}}</td>
         <td>
@@ -66,9 +68,9 @@
 
     <div class="row">
       <div class="row col-sm-1"></div>
-      <div class="row col-sm-4">
-        <div class="col-sm-12">
-          <h3>Registration Form</h3>
+      <div class="row col-sm-3">
+        <div class="col-sm-10">
+          <h3>Registration</h3>
           <form [formGroup]="profileForm">
             <input type="hidden" class="form-control" formControlName="id">
             <div class="form-group ">
@@ -90,7 +92,7 @@
             <br>
             <br>
             <div class="form-group ">
-              <button type="submit" *ngIf="btnsubmit" (click)="onsubmit()" class="btn btn-primary">Submit</button>
+              <button type="submit" *ngIf="btnsubmit" (click)="onsubmit()" class="btn btn-primary">Submit v1</button>
 
               <button type="submit" *ngIf="btnupdate" (click)="onUpdate(profileForm.value.id)"
                 class="btn btn-primary">Update</button>
@@ -100,7 +102,7 @@
         </div>
       </div>
       <div class="row col-sm-1"></div>
-      <div class="row col-sm-6">
+      <div class="row col-sm-8">
 
         <div class="container">
           <h3> Details of available Products </h3>
