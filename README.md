@@ -61,5 +61,26 @@ Below are some screens(5) shots from the application console output
 ```
 
 
+```
+Angular: 11.2.2
+... animations, common, compiler, compiler-cli, core, forms
+... platform-browser, platform-browser-dynamic, router
+Ivy Workspace: Yes
+
+Package                         Version
+---------------------------------------------------------
+@angular-devkit/architect       0.1102.1
+@angular-devkit/build-angular   0.1102.1
+@angular-devkit/core            11.2.1
+@angular-devkit/schematics      11.2.1
+@angular/cli                    11.2.1
+@angular/http                   7.2.16
+@schematics/angular             11.2.1
+@schematics/update              0.1102.1
+rxjs                            6.6.3
+typescript                      4.1.5
+```
+
+
 
 # END
