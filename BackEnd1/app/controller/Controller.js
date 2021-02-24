@@ -10,20 +10,19 @@ exports.employeeCreate = function (req, res) {
       message: "Requirements include name,post,dept and salary",
     });
   } else {
-    Employee.createEmployee(rusangu, function (err, name) {
+    Employee.createEmployee(rusangu, function (err, nameZ) {
       if (err) res.send(err);
       console.log(rusangu);
-      res.json(name);
+      res.json(nameZ);
     });
   }
 };
 
 exports.employeeAll = function (req, res) {
   //  GET method #2A
-  Employee.getAll(function (err, name) {
+  Employee.getAll(function (err, nameX) {
     if (err) res.send(err);
-    // console.log("Rusangu staff #1 : ", name);//1
-    res.send(name);
+    res.send(nameX);
   });
 };
 
@@ -35,34 +34,27 @@ exports.employeeOne = function (req, res) {
   });
 };
 
-// exports.employeeUpdate = function (req, res) {
-//   //   UPDATE method #3
-//   console.log('ZAMBIA'+req)
-//   console.log('ZIMBABWE'+res)
-//   Employee.updateByTaskId(
-//     req.params.taskId,
-//     new Employee(req.body),
-//     //function (err, post, dept, salary, name) {
-//       function (err, result) {
-//       if (err) res.send(err);
-//       res.json(post, dept, salary, name);
-//     }
-//   );
-// };
 
 exports.employeeUpdate = function (req, res) {
-  console.log(req + "===========ccccccccccUPDATEcccCONTROLLERccccccccccccc");
+  console.log("|===========EmployeeUpdate======CONTROLLER==========|");
+  console.log(req.body);
+  console.log('1-typeof req.body.id     = : '+req.body.id);
+  console.log(typeof req.body.id);
+  console.log('2-typeof req.paramsx2    = : '+req.params+'-|-'+Object.values(req.params));
+  console.log(Object.values(req.params));
+  console.log(typeof req.params);
+  console.log('3-typeof req.params.taskId= : '+req.params.taskId);
+  console.log(typeof req.params.taskId);
+  console.log("|===========MIDDLE==uu====CONTROLLER==========|");
 
   if (req.body.constructor === Object && Object.keys(req.body).length === 0) {
     res
       .status(400)
       .send({ error: true, message: "Submit all required fields" });
   } else {
-    const productUpdate = new Employee(req.body);
+    const currentUpdate1 = new Employee(req.body);
     var id=req.params.taskId;
-    console.log('id='+id)
-    console.log(productUpdate + "===========cccccccccccccccccccccccccccc");
-    Employee.update(id, productUpdate, function (err, result) {
+    Employee.update(id, currentUpdate1, function (err, result) {
       if (err) res.send(err);
       res.json({
         error: false,
